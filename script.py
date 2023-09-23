@@ -68,7 +68,7 @@ print(f"Total files: {count}")
 perCore = ceil(count/cores)
 threads = []
 index = 1
-progress_bar = tqdm(total=count, desc="Processing")
+progress_bar = tqdm(total=count, desc="Processing", delay=2)
 for start in range(0, count, perCore):
      end = start + perCore - 1
      if end > count - 1:
