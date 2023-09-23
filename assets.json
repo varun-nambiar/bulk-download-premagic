@@ -1,0 +1,33 @@
+{
+  "files": {
+    "8CWGGlCbJtI": {
+      "created_at": 1519671979.0,
+      "dynamic_image_url": "https://asts.premagic.com/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'RFNDMDMyNzkuSlBH'.JPG",
+      "image_name": "DSC03279.JPG",
+      "location": "https://s3-ap-southeast-1.amazonaws.com/asia-compressed-image-store/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'RFNDMDMyNzkuSlBH'.JPG",
+      "meta": {
+        "height": 800,
+        "ratio": 1.5,
+        "width": 1200
+      },
+      "status": "WAITING_FOR_APPROVAL",
+      "thumbnailLocation": "https://s3-ap-southeast-1.amazonaws.com/asia-compressed-image-store/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'dGh1bWJfRFNDMDMyNzkuSlBH'.JPG",
+      "thumbnail_dynamic_image_url": "https://asts.premagic.com/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'dGh1bWJfRFNDMDMyNzkuSlBH'.JPG"
+    },
+    "WcbBODPm3Vk": {
+      "created_at": 1519671981.0,
+      "dynamic_image_url": "https://asts.premagic.com/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'RFNDMDMyODAuSlBH'.JPG",
+      "image_name": "DSC03280.JPG",
+      "location": "https://s3-ap-southeast-1.amazonaws.com/asia-compressed-image-store/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'RFNDMDMyODAuSlBH'.JPG",
+      "meta": {
+        "height": 800,
+        "ratio": 1.5,
+        "width": 1200
+      },
+      "status": "WAITING_FOR_APPROVAL",
+      "thumbnailLocation": "https://s3-ap-southeast-1.amazonaws.com/asia-compressed-image-store/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'dGh1bWJfRFNDMDMyODAuSlBH'.JPG",
+      "thumbnail_dynamic_image_url": "https://asts.premagic.com/D3SsNwVhUtCr1TMl-nv47pmi8DM3xnNWm-b'dGh1bWJfRFNDMDMyODAuSlBH'.JPG"
+    }
+  },
+  "meta": {}
+}
