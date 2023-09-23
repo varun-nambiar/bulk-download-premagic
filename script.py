@@ -8,6 +8,7 @@ import requests
 import hmac
 import hashlib
 import base64
+from tqdm import tqdm
 
 # json file with same name
 json_file_name = "assets"
@@ -29,7 +30,7 @@ def generateKey(path):
   return f"https://images.premagic.com/{base64_encoded}/{path}"
 
 
-def process(index, total, start, end, files):
+def process(index, total, start, end, files, progress_bar):
   # function to print cube of given num
   # @todo - fix total when not all cores are used.
   print(f"{index}/{total}) Processing items {start} to {end}")
@@ -51,6 +52,8 @@ def process(index, total, start, end, files):
     with open(f"{folder}/{download_name}.jpg", "wb") as file:
       file.write(response.content)
 
+    progress_bar.update(1)
+
   print(f"{index}/{total} Done")
 
 
@@ -67,12 +70,13 @@ print(f"Total files: {count}")
 perCore = ceil(count/cores)
 threads = []
 index = 1
+progress_bar = tqdm(total=count, desc="Processing")
 for start in range(0, count, perCore):
      end = start + perCore - 1
      if end > count - 1:
           end = count - 1
 
-     threads.append(threading.Thread(target=process, args=(index, cores, start, end, files)))
+     threads.append(threading.Thread(target=process, args=(index, cores, start, end, files, progress_bar)))
      index = index+1
 
 for thread in threads:
