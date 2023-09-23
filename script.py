@@ -40,17 +40,15 @@ def process(index, total, start, end, files, progress_bar):
     download_name = files[i]['image_name'].split(".")[0]
 
     # skip if already exists
-    if os.path.exists(f"{folder}/{download_name}.jpg"):
-       continue
+    if not os.path.exists(f"{folder}/{download_name}.jpg"):
+      dynamic_image_url = files[i]['dynamic_image_url'].split("https://asts.premagic.com/")[1]
 
-    dynamic_image_url = files[i]['dynamic_image_url'].split("https://asts.premagic.com/")[1]
+      path = f"fit-in/4000x0/filters:quality(100):sharpen(0):attachment({download_name}.jpg):format(jpg)/{dynamic_image_url}"
+      url = generateKey(path)
 
-    path = f"fit-in/4000x0/filters:quality(100):sharpen(0):attachment({download_name}.jpg):format(jpg)/{dynamic_image_url}"
-    url = generateKey(path)
-
-    response = requests.get(url)
-    with open(f"{folder}/{download_name}.jpg", "wb") as file:
-      file.write(response.content)
+      response = requests.get(url)
+      with open(f"{folder}/{download_name}.jpg", "wb") as file:
+        file.write(response.content)
 
     progress_bar.update(1)
 
